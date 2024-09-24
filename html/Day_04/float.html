@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float</title>
+    <style>
+        div {
+            width: 150px;
+            height: 150px;
+            background-color: chartreuse;
+            border: 1px solid gray;
+        }
+
+        div.item {
+            float: left;
+            margin-left: 10px;
+        }
+
+        /*
+        div.one {  two box 그 자체는 one 영향을 받아서 밑에 깔림. content(글씨)는 두고 간다!
+            float: left;
+            margin-left: 10px;
+        }
+        */
+
+        div.three {
+            float: right;
+        }
+
+        p {
+            clear: left;
+            /* 위의 요소들에 적용된 float에 따라가지 않도록 함 */
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Float</h2>
+    <p>float은 block 요소에 적용시켜 각 요소를 하나의 층으로 만들어 배치<br>
+        어떤 요소를 float 하게 되면 그 아래에 배치된 다른 요소들에도 영향을 미친다.
+    </p>
+    <div class="item one">하나</div>
+    <div class="item two">둘</div>
+    <div class="item three">셋</div>
+    <div class="item four">넷</div>
+    <div class="item five">다섯</div>
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        Cumque nobis accusantium quam sed alias quod, reprehenderit esse odit,
+        tempora laudantium similique. Non, aliquid et quasi quidem odio minus itaque ab?
+    </p>
+</body>
+
+</html>

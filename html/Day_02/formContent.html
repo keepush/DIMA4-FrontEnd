@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 요소의 사용</title>
+</head>
+
+<body>
+    <h3>폼요소</h3>
+    <div>
+        <a href="../index.html">
+            <img src="./images/home.png" alt="첫 화면으로 이동">
+        </a>
+    </div>
+    <p>
+        사용자의 입력을 받아 그 내용을 서버로 전송하기 위해 사용하는 태그<br>
+        폼요소는 대부분 인라인 요소<br>
+        회원가입, 로그인, 비밀번호 변경, 게시글 입력, 댓글 입력 등에서 사용
+        <br><br>
+        input, textarea, select, label 등이 있다. <br>
+        name 속성 : 서버측 변수명의 역할<br><br>
+        form 태그의 속성 중 <br>
+        1) method="get" : 생략 가능, 주소 표시줄에 노출됨, 다른 화면을 달라는 요청.
+        많은 양의 데이터 전송시에는 get 사용하지 않는다. <br>
+        2) method="post" : 생략 불가, 주소 표시줄에 노출되지 않음, 처리 요청
+        많은 양의 데이터 전송, 파일 첨부시 post 사용
+
+    </p>
+    <hr>
+    <form action="" method="post"> <!-- get / post -->
+        <div class="artical">
+            <h3>input 태그</h3>
+            <fieldset>
+                <legend>input 태그의 다양한 type</legend>
+
+                <label for="userid">한 줄 글상자 : </label> <!--for : 하나의 id값과 매칭-->
+                <input type="text" id="userid" name="userid" maxlength="15" placeholder="아이디를 입력"><br>
+
+                <label for="password">비밀번호 : </label>
+                <input type="password" id="password" name="userpwd" placeholder="비밀번호 입력"><br>
+
+                <input type="hidden" name="hiddenData" value="서버로 전송되는 값">
+
+                <label for="picture">사진첨부 : </label>
+                <input type="file" id="picture" name="picture">
+            </fieldset>
+        </div><br><br>
+
+        <div class="article">
+            <h3>여러 개에서 선택 : radio, checkbox, select</h3>
+            <fieldset>
+                <legend>여러 항목 선택(지역, 취미)</legend>
+
+                <label>지역 :
+                    <!--name : 그룹핑 해주는 값, checked: 가장 체크를 많이 할 것 같은 항목에 기본값으로 주기-->
+                    <!-- value : 서버에 보내는 값-->
+                    <input type="radio" name="location" value="Seoul" checked> 서울
+                    <input type="radio" name="location" value="Busan"> 부산
+                    <input type="radio" name="location" value="Incheon"> 인천
+                    <input type="radio" name="location" value="Kwangju"> 광주
+                </label><br><br>
+
+                <label>취미 :
+                    <input type="checkbox" name="hobby" value="축구"> 축구
+                    <input type="checkbox" name="hobby" value="야구"> 야구
+                    <input type="checkbox" name="hobby" value="등산" checked> 등산
+                    <input type="checkbox" name="hobby" value="수영" checked> 수영
+                </label><br><br>
+
+                <label for="school">고등학교 : </label>
+                <select name="school" id="school">
+                    <optgroup>
+                        <option value="서울고등학교">서울고등학교</option>
+                        <option value="부산고등학교">부산고등학교</option>
+                        <option value="제주고등학교">제주고등학교</option>
+                        <option value="인천고등학교">인천고등학교</option>
+                        <option value="광주고등학교">광주고등학교</option>
+                    </optgroup>
+                </select><br>
+
+                <label for="color">색상1</label>
+                <select name="color" id="color">
+                    <optgroup>
+                        <option value="빨강색">빨강색</option>
+                        <option value="주황색">주황색</option>
+                        <option value="노랑색">노랑색</option>
+                        <option value="초록색">초록색</option>
+                        <option value="파란색">파란색</option>
+                    </optgroup>
+                </select>
+
+            </fieldset>
+        </div><br><br>
+
+        <div class="article">
+            <h3>textarea : 여러 줄 글상자</h3>
+            <label for="reason">여러 줄 글상자</label><br>
+            <textarea name="reason" id="reason" cols="100" rows="10"></textarea>
+        </div><br><br>
+
+        <div class="article">
+            <label>버튼들</label>
+            <input type="submit" value="전송"> <!-- 폼 전체의 내용을 서버로 전송 -->
+            <input type="reset" value="취소"> <!-- 폼 태그로 감싼 내용을 초기화 -->
+            <input type="button" value="첫 번째">
+            <button>두 번째</button>
+        </div>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iframe 요소</title>
+    <style>
+        iframe.content {
+            width: 80%;
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>iframe 요소</h3>
+    <p>
+        문서 내에 다른 문서를 포함시킬 수 있도록 해주는 요소
+        다른 웹페이지는 보안 문제로 인하여 iframe으로 포함시킬 수 없다.
+    </p>
+    <p>
+        <a href="./textContent.html" target="win">1. 텍스트 콘텐츠를 작성하는 기본태그</a>&nbsp;
+        <a href="./tableContent.html" target="win">3. 표 작성 기본 태그와 간단한 CSS</a>&nbsp;
+        <a href="./anchorContent.html" target="win">7. 링크처리하기</a>&nbsp;
+        <a href="./totalExam.html" target="win">8. 연습문제</a>&nbsp;
+    </p>
+    <p>
+        <iframe class="content" name="win" src="./textContent.html" frameborder="1"></iframe>
+    </p>
+</body>
+
+</html>

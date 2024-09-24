@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form 콘텐츠(추가)</title>
+</head>
+
+<body>
+    <h3>폼요소</h3>
+    <div>
+        <a href="../index.html">
+            <img src="./images/home.png" alt="첫 화면으로 이동">
+        </a>
+    </div>
+    <p>
+        input 태그의 여러 타입이 html5에서 만들어졌음.
+    </p>
+    <form action="" method="post">
+        <div class="article">
+            <h3>input 태그 기타 type들</h3>
+        </div>
+        <label> 검색 :
+            <input type="search" name="searchWord">
+        </label><br>
+        <label> 회사 홈페이지 :
+            <input type="url" name="url" id="" value="https://" placeholder="http://">
+        </label><br>
+        <label> 이메일 :
+            <input type="email" name="email">
+        </label><br>
+
+        <label for="color"> 색상
+            <input type="color" name="color" id="color">
+        </label><br>
+
+        <label for="join_date"> 날짜
+            <input type="date" name="date" id="join_date">
+        </label><br>
+
+        <label for="period"> 구간
+            <input type="range" name="period" id="period">
+        </label><br>
+
+        <label for="age"> 나이
+            <input type="number" name="age" id="age">
+        </label><br>
+
+        <br><br>
+        <input type="submit" value="전송">
+        <input type="reset" value="취소">
+    </form>
+</body>
+
+</html>

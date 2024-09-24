@@ -1,0 +1,39 @@
+/* code here */
+fieldset {
+    width: 600px;
+    height: 125px;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px dotted gray;
+}
+
+input {
+    width: 150px;
+    padding: 10px;
+    border: 0px;
+    border-radius: 200px;
+    text-align: center;
+    font-weight: bold;
+    background-color: lightgray;
+}
+
+input:hover {
+    cursor: alias;
+    box-shadow: 2px 5px rgba(0, 0, 0, 0.5);
+    margin: 10px;
+}
+
+[class=pointColor] {
+    background: linear-gradient(45deg, rgba(78, 197, 217, 1), rgba(38, 59, 151, 1));
+    color: white;
+}
+
+[value="SIGN IN"] {
+    color: gray;
+}

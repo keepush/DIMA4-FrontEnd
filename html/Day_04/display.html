@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+        img.second {
+            display: none;
+            /* 요소가 사라짐 */
+            /* visibility: hidden; */
+        }
+
+        /* 둥근 테두리 설정 */
+        input[type="search"] {
+            width: 300px;
+            height: 50px;
+            border-radius: 25px;
+            box-shadow: 5px 5px 5px lightgray;
+            border: 0px;
+            outline: none;
+            padding-left: 10px;
+            margin: 0 30px;
+        }
+
+        div.search {
+            width: 650px;
+            height: 60px;
+            border-radius: 24px;
+            box-shadow: 5px 5px 5px lightgray;
+            border: 0px;
+
+            /* flex display 사용 */
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+            outline: none;
+            padding-left: 20px;
+        }
+
+        div.search #icon {
+            width: 24px;
+            height: 44px;
+            margin-left: 20px;
+            margin-right: 20px;
+            background-image: url(./images/search.png);
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+        }
+
+        div.search input[type="search1"] {
+            width: 400px;
+            height: 45px;
+            margin: auto 10px;
+            border: 0px;
+        }
+
+        div.search #mic {
+            width: 24px;
+            height: 44px;
+            margin: auto 10px;
+            background-image: url(./images/voice\ search.png);
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+
+        div.searh #lens {
+            width: 24px;
+            height: 44px;
+            margin: auto 10px;
+            background-image: url(./images/image\ search.png);
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Display 속성</h2>
+    <p>
+        none, block, inline, inline-block 속성값을 이용해서 문서 내의 요소를 화면에 출력하는 방법을 제어
+    </p>
+    <div>
+        <img src="./images/face1.png" alt="">
+        <img src="./images/face2.png" alt="" class="second">
+        <img src="./images/face3.png" alt="">
+        <img src="./images/face4.png" alt="">
+    </div><br>
+    <div>
+        <h3>테두리 설정 : 둥근 테두리(border-radius)</h3>
+        <input type="text" placeholder="ID">
+        <input type="search" placeholder="검색어">
+        <input type="password" placeholder="비밀번호">
+    </div>
+    <div>
+        <h3>구글 검색창 만들기</h3>
+        <div class="search">
+            <div id="icon"></div>
+            <input type="search1" name="search" id="search" placeholder="Google 검색 또는 URL 입력">
+            <div id="mic"></div>
+            <div id="lens"></div>
+        </div>
+    </div>
+</body>
+
+</html>

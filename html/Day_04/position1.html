@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        div.item {
+            width: 150px;
+            height: 150px;
+            background-color: aquamarine;
+            border: 1px solid black;
+
+        }
+
+        div.one {
+            /* 동생태그들에게는 영향을 주지 않는다 */
+            position: relative;
+            top: 50px;
+            left: 50px;
+            background-color: burlywood;
+
+        }
+
+        div.three {
+            /* 동생태그들에게는 영향을 주지 않는다 */
+            position: relative;
+            top: 50px;
+            left: 50px;
+            background-color: plum;
+
+        }
+
+        div.two {
+            /* 동생태그들에게는 영향을 주지 않는다 */
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            background-color: greenyellow;
+        }
+
+        div.four {
+            position: relative;
+            top: 100px;
+            left: 100px;
+            background-color: rgb(224, 121, 173);
+            z-index: 5;
+            /* 높은 정수값을 가진 요소가 위로 배치 */
+        }
+
+        div.five {
+            position: relative;
+            left: 150px;
+            background-color: rgb(255, 252, 69);
+            z-index: 4;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>position을 이용한 배치</h2>
+    <p>
+        static : 기본값,
+        absolute : 하나의 레이어를 생성, 위치지정은 top, left, right, bottom<br>
+        &nbsp;&nbsp;부모의 position위치를 기준으로 이동<br>
+        &nbsp;&nbsp;만약 부모가 position 이 없으면 body가 기준이 된다.<br>
+        relative : 하나의 레이어를 생성, 위치지정은 top, left, right, bottom<br>
+        &nbsp;&nbsp;해당 해당요소 자체 기준으로 이동<br>
+        fixed : 하나의 레이어를 생성, 위치지정은 top, left, right, bottom<br>
+        &nbsp;&nbsp;화면을 기준으로 이동<br>
+
+
+    </p>
+    <div class="item one">하나</div>
+    <div class="item two">둘</div>
+    <div class="item three">셋</div>
+    <div class="item four">넷</div>
+    <div class="item five">다섯</div>
+</body>
+
+</html>

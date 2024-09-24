@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상 요소 선택자</title>
+    <style>
+        p.one::first-letter {
+            color: #f00;
+            font-size: xx-large;
+            font-weight: bold;
+        }
+
+        p.two::first-line {
+            color: #0f0;
+        }
+
+        p.three::before {
+            content: "하하하!!!";
+        }
+
+        p.four::after {
+            content: url(./images/bullet.png);
+        }
+
+        p::selection {
+            color: aliceblue;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>가상 요소 선택자</h2>
+    <p class="one">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        Numquam, cum perferendis officia unde fugit ex quae veniam accusamus autem dolorum eligendi qui illum quibusdam
+        ea nisi quos maxime modi debitis?
+    </p>
+    <p class="two">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        Numquam, cum perferendis officia unde fugit ex quae veniam accusamus autem dolorum eligendi qui illum quibusdam
+        ea
+        nisi quos maxime modi debitis?
+    </p>
+    <p class="three">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        Numquam, cum perferendis officia unde fugit ex quae veniam accusamus autem dolorum eligendi qui illum quibusdam
+        ea
+        nisi quos maxime modi debitis?
+    </p>
+    <p class="four">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        Numquam, cum perferendis officia unde fugit ex quae veniam accusamus autem dolorum eligendi qui illum quibusdam
+        ea
+        nisi quos maxime modi debitis?
+    </p>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!-- 3) 간단한 계산기 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>간단한 계산기</title>
+
+</head>
+
+<body>
+    <fieldset>
+        <legend>
+            <h2>간단한 계산기</h2>
+        </legend>
+        <div>
+            <input type="text" id="x">
+            <select id="operator">
+                <option value="+"> 더하기 </option>
+                <option value="-"> 빼기 </option>
+                <option value="*"> 곱하기 </option>
+                <option value="/"> 나누기 </option>
+                <option value="**"> 거듭제곱 </option>
+            </select>
+            <input type="text" id="y">
+            <input type="button" value="=" id="calculator">
+            <input type="button" value="C" id="clear">
+            <input type="text" id="result" readonly>
+        </div>
+    </fieldset>
+    <script>
+        // Code Here
+        document.getElementById('calculator').addEventListener('click', calc);
+        document.getElementById('clear').addEventListener('click', clear);
+
+
+        function calc() {
+            let num1 = document.getElementById('x').value;
+            let num2 = document.getElementById('y').value;
+            let result = document.getElementById('result').value;
+            let operator = document.getElementById('operator').value;
+
+            n1 = parseInt(num1);
+            n2 = parseInt(num2);
+
+            if (operator == '+') {
+                result = (n1 + n2);
+            }
+            if (operator == '-') {
+                result = (n1 - n2);
+            }
+            if (operator == '*') {
+                result = (n1 * n2);
+            }
+            if (operator == '/') {
+                result = (n1 / n2);
+            }
+            if (operator == '**') {
+                result = (n1 ** n2);
+            }
+
+            document.getElementById('result').setAttribute('value', result);
+
+            if (isNaN(num1)) {
+                alert("숫자만 입력해 주세요.")
+                clear();
+                num1.focus();
+                return;
+            }
+
+            if (isNaN(num2)) {
+                alert("숫자만 입력해 주세요.")
+                clear();
+                num2.focus();
+                return;
+            }
+        }
+
+
+        function clear() {
+            let num1 = document.getElementById('x');
+            let num2 = document.getElementById('y');
+            let result = document.getElementById('result');
+            num1.value = "";
+            num2.value = "";
+            result.value = "";
+            return;
+        }
+    </script>
+</body>
+
+</html>

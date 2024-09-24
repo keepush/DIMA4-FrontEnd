@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>롤오버 메뉴 작성하기</title>
+
+    <style>
+        div.container {
+            font-family: "Noto Serif KR", serif;
+            width: 1000px;
+            height: 500px;
+            margin: 0 auto;
+            background-color: rgb(186, 247, 198);
+        }
+
+        /* inline: width(x), block: width(o), inline-block: width(o), 다른 요소와 나눔 */
+        span.gnb {
+            font-size: 1.3em;
+            font-weight: 400;
+            font-style: normal;
+            float: left;
+            display: inline-block;
+            width: 20%;
+            height: 50px;
+            background-color: pink;
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        span.gnb:hover {
+            background-color: blue;
+            font-weight: bold;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <span class="gnb">Menu-1</span>
+        <span class="gnb">Menu-2</span>
+        <span class="gnb">Menu-3</span>
+        <span class="gnb">Menu-4</span>
+        <span class="gnb">Menu-5</span>
+    </div>
+</body>
+
+</html>
